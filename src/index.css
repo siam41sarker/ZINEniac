@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 76% 91%;
+    --foreground: 30 10% 15%;
+
+    --card: 48 60% 95%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 48 76% 91%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 16 95% 55%;
+    --primary-foreground: 48 76% 95%;
+
+    --secondary: 0 72% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 40% 85%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 120 60% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 30% 80%;
+    --input: 40 30% 80%;
+    --ring: 16 95% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 48 76% 91%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 16 95% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 40% 85%;
+    --sidebar-accent-foreground: 30 10% 15%;
+    --sidebar-border: 40 30% 80%;
+    --sidebar-ring: 16 95% 55%;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(48 76% 91%), hsl(45 60% 85%));
+    --cta-dark-bg: 220 20% 14%;
+    --gold: 45 90% 50%;
+    --blue-program: 220 70% 50%;
+    --green-program: 150 60% 40%;
+    --fun-yellow: 45 100% 60%;
+    --fun-blue: 200 90% 55%;
+    --fun-green: 140 70% 45%;
+    --fun-purple: 16 95% 55%;
+    --fun-pink: 330 80% 65%;
+  }
+
+  .dark {
+    --background: 220 20% 14%;
+    --foreground: 48 76% 91%;
+    --card: 220 20% 18%;
+    --card-foreground: 48 76% 91%;
+    --popover: 220 20% 18%;
+    --popover-foreground: 48 76% 91%;
+    --primary: 16 95% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 72% 51%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 15% 25%;
+    --muted-foreground: 45 20% 70%;
+    --accent: 120 60% 35%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 16 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .fun-blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  .fun-blob-2 {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  .fun-blob-3 {
+    border-radius: 40% 60% 60% 40% / 50% 60% 40% 50%;
+  }
+  .wavy-underline {
+    text-decoration: underline wavy;
+    text-underline-offset: 6px;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 3s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
