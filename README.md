@@ -72,7 +72,7 @@ Admin functionality is restricted to authorized accounts only. Role assignments 
 
 ## Deployment
 
-The site is deployed automatically via Lovable. Backend functions and database migrations deploy on push.
+Backend functions and database migrations deploy on push.
 
 ## License
 
